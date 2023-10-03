@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Pangram {
+
+			// Function to check if a string contains all the letters (a to z)
+	public static void containAllLetters(String string) {
+        	string = string.toLowerCase();
+    	boolean allLetterPresent = true;
+
+    			// Loop iterates over each character of the given string
+    	for (char ch = 'a'; ch <= 'z'; ch++) {
+        				// Checks if the string does not contain all the letters
+        	if (!string.contains(String.valueOf(ch))) {
+            	allLetterPresent = false;
+            	break;
+        	}
+    	}
+
+    	// Checks if all the letters are presented or not
+    	if (allLetterPresent){
+        		System.out.println("Pangram String");
+	}
+    	else{
+           		System.out.println("Not a Pangram String");
+	}
+	}
+
+	public static void main(String args[]) {
+        	Scanner scanner = new Scanner(System.in);
+    	System.out.print("Enter a string to check: ");
+    	String string = scanner.nextLine();
+
+    	// Function calling
+    	containAllLetters(string);
+	}
+}
+
