@@ -1,0 +1,24 @@
+(Using sort and reverse using methods)
+const strArr1 = ['a', 'c', 'z', 'f'];                //Assign an array
+const descArr = strArr1.sort().reverse();		// Sorting and reverse in array
+console.log(descArr);
+(without using methods)
+
+let numbers = [5, 2, 8, 1, 7];
+
+// descending sort without using sort function
+for (let i = 0; i < numbers.length - 1; i++) {
+	for (let j = 0; j < numbers.length - 1 - i; j++) {
+    	if (numbers[j] < numbers[j + 1]) {
+        					// Swap elements if they are in the wrong order
+        	[numbers[j], numbers[j + 1]] = [numbers[j + 1], numbers[j]];
+    	}
+	}
+}
+
+console.log("Sorted Array in Descending Order:", numbers);
+
+
+
+
+
